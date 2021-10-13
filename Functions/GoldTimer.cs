@@ -12,7 +12,7 @@ namespace Corvux.Function
     {
         [Function("GetGoldTimer")]
         [QueueOutput("goldqueue", Connection = "AzureWebJobsStorage")]
-        public static async Task<ResponceObj> Run([TimerTrigger("0 */5 * * * *")] FunctionContext context)
+        public static async Task<ResponceObj> Run([TimerTrigger("* 0 * * * *")] FunctionContext context)
         {
             HttpClient client = new HttpClient();
 
